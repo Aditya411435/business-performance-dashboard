@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #172b4d;
+}
+
+.header {
+    background: white;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.header h1 {
+    font-size: 23px;
+    margin-bottom: 8px;
+    color: #123d70;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.filters select,
+.filters input,
+.filters button,
+.table-heading input,
+#applyDates {
+    padding: 10px;
+    border: 1px solid #dbe3ed;
+    border-radius: 7px;
+    background: white;
+    color: #334155;
+}
+
+.filters button,
+#applyDates {
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-dates {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-dates label {
+    font-size: 12px;
+    display: grid;
+    gap: 4px;
+}
+
+.dashboard {
+    padding: 20px;
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.kpi-card,
+.panel {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.03);
+}
+
+.kpi-card {
+    padding: 18px;
+    min-width: 0;
+}
+
+.kpi-card span {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.kpi-card h2 {
+    margin: 14px 0 8px;
+    font-size: 25px;
+    overflow-wrap: anywhere;
+}
+
+.kpi-card small {
+    color: #0d9488;
+    font-size: 12px;
+}
+
+.section-title {
+    font-size: 19px;
+    margin: 28px 0 14px;
+    color: #123d70;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.panel {
+    padding: 18px;
+    min-width: 0;
+}
+
+.panel h3 {
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.panel canvas {
+    width: 100% !important;
+    max-height: 280px;
+}
+
+.revenue-box {
+    background: #eff6ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.revenue-box p {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.revenue-box h2 {
+    font-size: 21px;
+    overflow-wrap: anywhere;
+}
+
+.revenue-box.collected {
+    background: #ecfdf5;
+}
+
+.revenue-box.outstanding {
+    background: #fff7ed;
+}
+
+.table-panel {
+    margin-bottom: 30px;
+}
+
+.table-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.table-heading h3 {
+    margin: 0;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    background: #f8fafc;
+    color: #475569;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+#recordCount {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.status {
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 11px;
+}
+
+@media (max-width: 1100px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .chart-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .dashboard {
+        padding: 12px;
+    }
+
+    .header {
+        padding: 16px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .kpi-grid,
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        width: 100%;
+    }
+
+    .filters select,
+    .filters button {
+        width: 100%;
+    }
+
+    .custom-dates {
+        width: 100%;
+    }
+
+    .custom-dates label,
+    .custom-dates input {
+        width: 100%;
+    }
+
+    .table-heading {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .table-heading input {
+        width: 100%;
+    }
+}
